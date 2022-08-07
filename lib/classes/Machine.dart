@@ -4,6 +4,10 @@ import 'package:coffee_machine/enums/CoffeeType.dart';
 import 'package:coffee_machine/interfaces/ICoffee.dart';
 
 class Machine {
+  Machine._privateConstructor();
+  static final Machine _instance = Machine._privateConstructor();
+  factory Machine() => _instance;
+
   final Resources _resources = Resources();
 
   Resources getResources() => _resources;
