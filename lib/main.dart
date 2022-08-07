@@ -26,25 +26,27 @@ class MyApp extends StatelessWidget {
           length: 2,
           child: Scaffold(
             appBar: AppBar(
-              title: const Text('Coffee Mashine'),
+              title: const Text('Coffee Machine'),
               automaticallyImplyLeading: false,
-              bottom:
-                 const TabBar(
-                      indicatorColor: Colors.grey,
-                      tabs: [
+              bottom: const TabBar(indicatorColor: Colors.grey, tabs: [
                 Tab(
-                  icon: Image(image: AssetImage("assets/icons/coffeeCup.png"), width: 30, height: 30,),
+                  icon: Image(
+                    image: AssetImage("assets/icons/coffeeCup.png"),
+                    width: 30,
+                    height: 30,
+                  ),
                 ),
                 Tab(
-                  icon: Image(image: AssetImage("assets/icons/resources.png"), width: 30, height: 30,),
+                  icon: Image(
+                    image: AssetImage("assets/icons/resources.png"),
+                    width: 30,
+                    height: 30,
+                  ),
                 )
               ]),
             ),
-            body: const TabBarView(
-              children: [
-                CoffeeMaker(),
-                AddResources()
-              ],
+            body: TabBarView(
+              children: [CoffeeMaker(), const AddResources()],
             ),
           ),
         )
