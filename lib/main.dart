@@ -46,7 +46,7 @@ class MyApp extends StatelessWidget {
               ]),
             ),
             body: TabBarView(
-              children: [CoffeeMaker(), const AddResources()],
+              children: [CoffeeMaker(), AddResources()],
             ),
           ),
         )
