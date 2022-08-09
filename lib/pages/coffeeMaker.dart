@@ -235,10 +235,9 @@ class _CoffeeMaker extends State<CoffeeMaker> {
                                     icon: Icon(Icons.money_off),
                                     // todo: высвечивающаяся подсказка
                                     onPressed: () => setState(() {
-                                          if (machine.getResources().getCash() >
-                                              0) {
+                                          if (machine.getResources().getCash() > 0) {
                                             machine.getResources().setCash(0);
-                                          } // : print("you have no money")
+                                          }// todo: print("you have no money")
                                         })),
                               ),
                             ]))
