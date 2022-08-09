@@ -68,7 +68,25 @@ class _AddResource extends State<AddResources> {
             ),
           ),
         ),
-        Container(),
+        Container(
+          height: 250,
+          width: double.infinity,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                spreadRadius: 5,
+                blurRadius: 15,
+                offset: Offset.zero,
+              )
+            ]
+          ),
+          //todo: form controls
+          child: Column(
+
+          ),
+        ),
       ],
     );
   }
