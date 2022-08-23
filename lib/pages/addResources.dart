@@ -57,11 +57,9 @@ class _AddResource extends State<AddResources> {
                                   fontSize: 20, color: Colors.black54)),
                         ]),
                   ),
-                  Container(
-                    margin: const EdgeInsets.symmetric(vertical: 20),
-                    child: Text('Cash: ${machine.getResources().getCash()}',
-                        style:
-                        const TextStyle(fontSize: 25, color: Colors.black54)),
+                  Text('Cash: ${machine.getResources().getCash()}',
+                      style:
+                      const TextStyle(fontSize: 25, color: Colors.black54)
                   ),
                 ],
               ),
@@ -83,9 +81,92 @@ class _AddResource extends State<AddResources> {
             ]
           ),
           //todo: form controls
-          child: Column(
-
-          ),
+            child: Container(
+              alignment: Alignment.center,
+              child: Row(
+                children: [
+                  // todo: сделать генерацию полей из массива?
+                  Flexible(
+                    flex: 2,
+                    child: Container(
+                      padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                      child: Column(
+                        children: <Widget>[
+                          TextFormField(
+                            key: _milk,
+                            controller: milkController,
+                            decoration: const InputDecoration(
+                                hintText: 'put milk'),
+                            validator: (String? value) {
+                              if (value == null || value.isEmpty) {
+                                return 'please enter milk';
+                              }
+                              try {
+                                var milk = int.parse(value);
+                              } catch (e) {
+                                return 'you put strange resource!!!';
+                              }
+                              return null;
+                            },
+                          ),
+                          TextFormField(
+                            key: _water,
+                            controller: waterController,
+                            decoration: const InputDecoration(
+                                hintText: 'put water'),
+                            validator: (String? value) {
+                              if (value == null || value.isEmpty) {
+                                return 'please enter water';
+                              }
+                              try {
+                                var water = int.parse(value);
+                              } catch (e) {
+                                return 'you put strange resource!!!';
+                              }
+                              return null;
+                            },
+                          ),
+                          TextFormField(
+                            key: _beans,
+                            controller: beansController,
+                            decoration: const InputDecoration(
+                                hintText: 'put beans'),
+                            validator: (String? value) {
+                              if (value == null || value.isEmpty) {
+                                return 'please enter beans';
+                              }
+                              try {
+                                var beans = int.parse(value);
+                              } catch (e) {
+                                return 'you put strange resource!!!';
+                              }
+                              return null;
+                            },
+                          ),
+                          TextFormField(
+                            key: _cash,
+                            controller: cashController,
+                            decoration: const InputDecoration(
+                                hintText: 'put cash'),
+                            validator: (String? value) {
+                              if (value == null || value.isEmpty) {
+                                return 'please enter cash';
+                              }
+                              try {
+                                var cash = int.parse(value);
+                              } catch (e) {
+                                return 'you put strange cash!!!';
+                              }
+                              return null;
+                            },
+                          )
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
         ),
       ],
     );
