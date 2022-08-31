@@ -9,11 +9,10 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  //todo: push
   //todo: second page
   //todo: 2 big labs
-  //todo: вынести объявление класса машины сюда
-  //todo:
+  //todo: readme
+  //todo: notes
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +44,7 @@ class MyApp extends StatelessWidget {
                 )
               ]),
             ),
-            body: TabBarView(
+            body: const TabBarView(
               children: [CoffeeMaker(), AddResources()],
             ),
           ),
