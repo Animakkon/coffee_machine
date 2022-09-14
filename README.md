@@ -1,20 +1,24 @@
 # coffee_machine
+Проект: КОФЕМАШИНА
 
-A new Flutter project.
+## Описание идеи
 
-## Getting Started
+Данный проект предназначен для отработки навыков программирования на lutter для студентов Кубанского Государственного Аграрного Университета.
 
-This project is a starting point for a Flutter application.
+Необходимо реализовать приложение, имитирующее работу кофемашины.
+Машина работает с типичными продуктами: кофе, молоко, вода; если у нее что-то заканчивается, она не может выполнить ваш заказ. Вы можете получить три вида кофе: эспрессо, капучино и латте. Поскольку ничего не бывает бесплатно, она также предполагает операции с деньгами.
 
-A few resources to get you started if this is your first Flutter project:
+*Реализуемый функционал:*
+1. Работа с используемыми ресурсами продуктов машины - добавление, расход
+2. Работа с денежными ресурсами машины - добавление, расход, обнуление
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
+## Сделать:
+- [ ] Описать лр 2
+- [ ] Реализовать практику на изучение асинхронных функций - задержка в приготовлении кофе
+- [ ] Описать лабораторную с ассинхронными методами
+- [ ] Реализовать оповещения
+- [ ] Изменяющиеся изображения
+- [ ] Исправить интерфейс
 
 _______
 
