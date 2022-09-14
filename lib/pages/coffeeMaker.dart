@@ -232,7 +232,7 @@ class _CoffeeMaker extends State<CoffeeMaker> {
                                     color: Colors.pink[200],
                                     borderRadius: BorderRadius.circular(10)),
                                 child: IconButton(
-                                    icon: Icon(Icons.money_off),
+                                    icon: const Icon(Icons.money_off),
                                     // todo: высвечивающаяся подсказка
                                     onPressed: () => setState(() {
                                           if (machine.getResources().getCash() > 0) {

@@ -188,7 +188,7 @@ class _AddResource extends State<AddResources> {
                     child: IconButton(
                         icon: const Icon(Icons.add),
                         // todo: высвечивающаяся подсказка
-                        // todo: обавить метод добавления ресурсов
+                        // todo: добавить метод добавления ресурсов
                         onPressed: () => setState(() {})),
                   ),
                   Container(

@@ -9,7 +9,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  //todo: second page
   //todo: 2 big labs
   //todo: readme
   //todo: notes
