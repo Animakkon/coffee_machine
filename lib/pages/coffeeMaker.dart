@@ -5,6 +5,8 @@ import 'package:coffee_machine/enums/CoffeeType.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../asyncFunctions.dart';
+
 //todo: разбить на кусочки виджетов для простоты
 class CoffeeMaker extends StatefulWidget {
   const CoffeeMaker({Key? key}) : super(key: key);
@@ -31,7 +33,6 @@ class _CoffeeMaker extends State<CoffeeMaker> {
   @override
   Widget build(BuildContext context) {
     //todo: автоматическое определение высоты элементов
-
     return ListView(
       children: [
         // * height: 300
@@ -156,10 +157,12 @@ class _CoffeeMaker extends State<CoffeeMaker> {
                               ),
                               child: IconButton(
                                   icon: const Icon(Icons.play_arrow_rounded),
-                                  //todo: making coffee method
-                                  onPressed: () => setState(() {
-                                        machine.makeCoffee(_type);
-                                      })),
+                                  onPressed: () => {
+                                        setState(() {
+                                          machine.makeCoffee(_type);
+                                        }),
+                                        process(_type, context)
+                                      }),
                             ),
                           ),
                           flex: 1,
@@ -235,9 +238,10 @@ class _CoffeeMaker extends State<CoffeeMaker> {
                                     icon: const Icon(Icons.money_off),
                                     // todo: высвечивающаяся подсказка
                                     onPressed: () => setState(() {
-                                          if (machine.getResources().getCash() > 0) {
+                                          if (machine.getResources().getCash() >
+                                              0) {
                                             machine.getResources().setCash(0);
-                                          }// todo: print("you have no money")
+                                          } // todo: print("you have no money")
                                         })),
                               ),
                             ]))
@@ -248,6 +252,24 @@ class _CoffeeMaker extends State<CoffeeMaker> {
               ],
             )),
       ],
+    );
+  }
+}
+
+class MySnack extends StatefulWidget {
+  MySnack({Key? key, required this.msg}) : super(key: key);
+
+  final String msg;
+
+  @override
+  State<MySnack> createState() => _MySnack();
+}
+
+class _MySnack extends State<MySnack> {
+  @override
+  Widget build(BuildContext context) {
+    return SnackBar(
+      content: Text(widget.msg),
     );
   }
 }
