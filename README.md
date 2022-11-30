@@ -24,3 +24,4 @@ _______
 
 ![img.png](assets/readme/makeCoffee.png)
 ![img.png](assets/readme/resources.png)
+UPDATE: Юля добавила текст!))
